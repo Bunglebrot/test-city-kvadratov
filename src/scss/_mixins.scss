@@ -1,0 +1,53 @@
+@mixin title {
+  font-size: 90px;
+  font-weight: bold;
+  font-family: 'Lato', 'Arial', sans-serif;
+  color: $main-color;
+}
+
+@mixin subtitle {
+  line-height: 38px;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: 'Lato', 'Arial', sans-serif;
+  color: $main-color;
+}
+
+@mixin body-text {
+  line-height: 22px;
+  font-size: 15px;
+  font-family: 'Lato', 'Arial', sans-serif;
+  color: $secondary-color;
+}
+
+@mixin clearly-text {
+  line-height: 29px;
+  font-size: 22px;
+  font-family: 'Lato', 'Arial', sans-serif;
+  color: $main-color;
+}
+
+@mixin frame-container {
+  padding-left: 50px;
+  padding-right: 50px;
+
+  @media (max-width: 576px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
+@mixin visually-hidden {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
