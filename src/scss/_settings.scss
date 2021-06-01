@@ -1,0 +1,27 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #ffffff;
+  color: #35373B;
+  font-size: 16px;
+  font-family: 'Lato', 'Arial', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex-grow: 1;
+
+  h1 {
+    @include visually-hidden;
+  }
+}
