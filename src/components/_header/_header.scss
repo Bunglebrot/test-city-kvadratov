@@ -1,0 +1,20 @@
+.header-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 0px 22px;
+ 
+  border-bottom: 1px solid #ECECF0;
+
+  @include frame-container;
+
+  &__logotype {
+    flex-basis: 220px;
+  }
+
+  &__purpose-text  {
+    font-size: 15px;
+    color: $trinity-color;
+  }
+}
