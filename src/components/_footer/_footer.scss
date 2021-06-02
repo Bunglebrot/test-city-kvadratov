@@ -1,0 +1,32 @@
+.footer-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 27px 0px;
+
+  border-top: 1px solid #ECECF0;
+
+  @include frame-container;
+
+  &__copyright {
+    flex-basis: 200px;
+    color: $trinity-color;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 399px) {
+  .footer-block {
+    justify-content: center;
+
+    &__copyright {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    &__social-sites-list {
+      margin-top: 50px;
+    }
+  }
+}
