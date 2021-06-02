@@ -11,6 +11,15 @@
 
   &__logotype {
     flex-basis: 220px;
+
+    transition: box-shadow .3s ease-in-out;
+
+    &:hover, &:focus {
+      outline: none;
+
+      box-shadow: 0px 0px 0px 3px #fff,
+      0px 0px 0px 6px $cosmos-color;
+    }
   }
 
   &__purpose-text  {
