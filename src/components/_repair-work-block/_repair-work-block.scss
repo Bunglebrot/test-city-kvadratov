@@ -1,0 +1,63 @@
+.repair-work-block {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 100px 0px 130px;
+
+  @include frame-container;
+
+  & h2 {
+    @include visually-hidden;
+  }
+
+  &__wrapper-text-content {
+
+    @media (min-width: 992px) {
+      margin-right: 84px;
+      align-self: center;
+      flex-basis: 50%;
+    }
+  }
+
+  &__title {
+    @include title;
+    margin: 0;
+
+    @media (max-width: 576px) {
+      font-size: 56px;
+    }
+  }
+
+  &__subtitle {
+    @include subtitle;
+    margin: 25px 0;
+  }
+
+  &__clearly-text {
+    @include clearly-text;
+    margin-bottom: 25px;
+
+    &_underline {
+      border-bottom: 2px solid currentColor;
+    }
+  }
+
+  &__content-text {
+    @include body-text;
+    margin-bottom: 48px;
+
+    &_bold {
+      font-weight: bold;
+    }
+  }
+
+  &__img {
+    flex-basis: 50%;
+    object-fit: cover;
+    background-color: #e5e5e5;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+}
