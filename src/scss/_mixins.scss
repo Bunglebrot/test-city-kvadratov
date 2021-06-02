@@ -27,8 +27,8 @@
   color: $main-color;
 }
 
-@mixin button($bg-color) {
-  color: #ffffff;
+@mixin button($color, $bg-color) {
+    color: $color;
     font-size: 15px;
     font-family: 'Lato', 'Arial', sans-serif;
     font-weight: bold;
@@ -41,11 +41,12 @@
     background-color: $bg-color;
     cursor: pointer;
 
-    transition: box-shadow .4s ease-in-out;
+    transition: box-shadow .3s ease-in-out;
 
     &:hover, &:focus {
       outline: none;
-      box-shadow: 2px 2px 6px $bg-color;
+      box-shadow: 0px 0px 0px 3px currentColor,
+      0px 0px 0px 8px $bg-color;
     }
 
     &:disabled {
