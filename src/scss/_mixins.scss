@@ -27,6 +27,32 @@
   color: $main-color;
 }
 
+@mixin button($bg-color) {
+  color: #ffffff;
+    font-size: 15px;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: bold;
+
+    padding: 13px 28px;
+    margin-right: 25px;
+
+    border-radius: 6px;
+    border: none;
+    background-color: $bg-color;
+    cursor: pointer;
+
+    transition: box-shadow .4s ease-in-out;
+
+    &:hover, &:focus {
+      outline: none;
+      box-shadow: 2px 2px 6px $bg-color;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+}
+
 @mixin frame-container {
   padding-left: 50px;
   padding-right: 50px;
