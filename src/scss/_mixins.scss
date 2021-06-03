@@ -34,7 +34,6 @@
     font-weight: bold;
 
     padding: 19px 28px;
-    margin-right: 25px;
 
     border-radius: 6px;
     border: none;
@@ -51,6 +50,10 @@
 
     &:disabled {
       cursor: not-allowed;
+    }
+
+    @media (max-width: 340px) {
+      padding: 14px 20px;
     }
 }
 
