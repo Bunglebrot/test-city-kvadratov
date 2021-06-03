@@ -3,7 +3,8 @@
   align-items: center;
 
   &__btn {
-    @include  button(#ffffff, $cosmos-color);    
+    @include  button(#ffffff, $cosmos-color);
+    margin-right: 26px;
   }
 
   &__date-span {
