@@ -2,7 +2,6 @@ const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -14,6 +13,7 @@ module.exports = {
   mode: 'development',
   entry: './index.js',
   output: {
+    assetModuleFilename: 'assets/[hash][ext]',
     filename: `./js/${filename('js')}`,
     path: path.resolve(__dirname, 'dist'),
     publicPath: '',
@@ -49,7 +49,6 @@ module.exports = {
       filename: `./css/${filename('css')}`
     }),
   ],
-
   
   target: ['web', 'es5'],
   module: {
@@ -68,7 +67,6 @@ module.exports = {
             },
           },
           'css-loader',
-          'postcss-loader',
         ],
       },
       {
@@ -91,37 +89,15 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
+          sourceMaps: true, inputSourceMap: true,
           presets: [
-            [
-              '@babel/preset-env',
-              {
-                modules: false,
-                targets: {
-                  browsers: '> 0.25%, IE >= 11, not dead',
-                },
-              }
-            ]
+            ['@babel/preset-env',]
           ]
         },
       },
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
-        use: [{
-          options: {
-          name: `img/${filename('[ext]')}`,  
-        }}]
-        ,
-        dependency: { not: ['url'] },
-          use: [
-            {
-              loader: 'url-loader',
-              options: {
-                limit: 8192,
-              },
-            },
-          ],
-          type: 'javascript/auto'
       },
       {
         test: /\.svg$/,
