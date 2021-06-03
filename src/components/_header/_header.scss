@@ -1,25 +1,21 @@
 .header-block {
   display: flex;
   flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 26px 0px 22px;
+  padding: 26px 0px 18px;
  
   border-bottom: 1px solid #ECECF0;
+
+  @media (max-width: 776px) {
+    display: block;
+  }
 
   @include frame-container;
 
   &__logotype {
-    flex-basis: 220px;
-
     transition: box-shadow .3s ease-in-out;
-
-    &:hover, &:focus {
-      outline: none;
-
-      box-shadow: 0px 0px 0px 3px #fff,
-      0px 0px 0px 6px $cosmos-color;
-    }
   }
 
   &__purpose-text  {
