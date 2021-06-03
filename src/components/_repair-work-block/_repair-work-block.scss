@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
 
-  padding: 100px 0px 130px;
+  padding: 100px 0px 146px;
 
   @include frame-container;
 
@@ -13,8 +13,8 @@
   &__wrapper-text-content {
 
     @media (min-width: 992px) {
-      margin-right: 84px;
-      align-self: center;
+      margin-right: 90px;
+      margin-top: 44px;
       flex-basis: 50%;
     }
   }
@@ -30,12 +30,12 @@
 
   &__subtitle {
     @include subtitle;
-    margin: 25px 0;
+    margin: 22px 0 -7px;
   }
 
   &__clearly-text {
     @include clearly-text;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 
     &_underline {
       border-bottom: 2px solid currentColor;
@@ -44,7 +44,7 @@
 
   &__content-text {
     @include body-text;
-    margin-bottom: 48px;
+    margin-bottom: 54px;
 
     &_bold {
       font-weight: bold;
